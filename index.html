@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TRELLO</title>
+</head>
+
+<style>
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+        color: black;
+    }
+
+    /**GENERAL ANIMATION******/
+    
+    @keyframes slide-in {
+            0%{
+                transform:translateX(-20%);
+            }
+            
+            100%{
+                transform:translateX(0) ;
+            }
+        }
+
+        @keyframes slide-out {
+            0%{
+                transform:translateX(0);
+            }
+            
+            100%{
+                transform:translateX(-100%) ;
+            }
+        }
+
+
+
+
+        #third:hover .hover-display{
+            display: block;
+            
+            
+            animation: slide-out 0.5s ease-in-out forwards;
+            
+
+        }
+
+
+
+
+
+    /**GENERAL ANIMATION******/
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* HEADER1  */
+    .containerr{
+        max-width: 100%;
+    }
+    .main{
+        display: flex;
+        justify-content: space-between;        
+    }
+
+    .main:hover{
+        box-shadow: 2px 10px 5px 0px rgba(216, 215, 215, 0.75);
+        -webkit-box-shadow: 2px 10px 5px 0px rgba(211, 209, 209, 0.75);
+        -moz-box-shadow: 2px 10px 5px 0px rgba(214, 208, 208, 0.75);
+
+        transition: 0.3s ease-in-out;
+
+        
+        
+    }
+
+
+
+
+    .header1-left{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    
+    .star{
+        position: absolute;
+        margin-top: 20px;
+        margin-left: -30px;
+    }
+
+    .atlassian{
+        font-size: 13px;
+        color: blue;
+        margin-top: 5px;
+        font-weight: bolder;
+        
+    }
+    
+    .trello{
+        margin-top: -10px;
+        font-weight: bolder;
+    }
+
+    .t{
+        padding-top: 20px;
+    }
+    .logo{
+        padding-left: 60px;
+    }
+
+    .sub-logo1{
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .header1-right{ 
+        display: flex;
+    }
+
+    .header1-right:hover{
+
+    }
+    
+    a{
+        margin-right: 20px;
+        text-decoration: none;
+        color: inherit;
+        margin-left: 9px;
+        
+    }
+
+    i{
+        font-size: 100px;
+    }
+
+    .login{
+        padding-top: 15px;
+        margin-right: 30px;
+    }
+    .login-btn{
+        font-size: 22px;
+        border: none;
+        background-color: white;
+    }
+    
+    .get-trol-btn{
+        padding: 20px;
+        background-color: blue;
+        border: none;
+        color: white;
+        font-size: 18px;
+    }
+
+    .bar-icon{
+        display: none;
+    }
+
+    /* HEADER 2  */
+    .header2{
+        text-align: center;
+        padding: 15px;
+        background-color: rgb(210, 234, 243);
+        padding: 5px;
+    }
+
+    .header2>p{
+        padding-top: 15px;
+    }
+    
+    .learn-more{
+        text-decoration: underline;
+        color: blue;
+    }
+    .mobile-bar{
+        display: none;
+    }
+
+    /**************ICONS**/
+
+    .fa{
+        opacity: 30%;
+    }
+
+
+    .absolute{
+        background-color: rgb(255, 255, 255);
+        width: 100%;    
+        height: 70vh;
+        position: absolute;
+        z-index: 1;
+        
+    }
+    
+    .features-flex{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        
+    }
+    
+    .flex-right{
+        
+        width: 750px;
+        margin-left: 60px;                
+    }
+
+    .inner-flex1{
+        padding-top: 20px;
+        width: 650px;
+        margin-top: -5px;
+        margin-left: 70px;
+        
+    }
+
+    .right-flex{
+        
+        background: linear-gradient(174deg,  rgb(223, 223, 223), rgba(255, 255, 255, 0.267));
+        
+
+
+        width: 450px;
+        padding: 20px;
+        margin-top: -10px;
+        height: 68vh;
+
+    }
+
+
+    .flexing1{
+        display: flex;
+        margin-left: -30px;
+        justify-content: space-around;
+        
+    }
+
+    .flexing2{
+        display: flex;
+        margin-left: -255px;
+        justify-content: space-evenly;
+    }
+
+
+
+
+   
+
+    .flexing{
+        margin-left: 80px;
+    }
+
+    li{
+        list-style: none;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+    i{
+        margin-right: 10px;
+    }
+
+    .desktop-p{
+        width: 195px;
+        font-size: 15px;
+        
+    }
+    
+    .desktop-pp{
+        width: 190px;
+        
+    }
+    .desktop-ppp{
+        margin-left: -210px;
+        
+    }
+
+    /**FEATURES**/
+
+
+    #features-display{
+        display: none;
+    }
+
+    #features-display.active{
+        display: block;
+    }
+    
+    .underline.active{
+        border-bottom: 1px solid blue;
+    }
+
+    .a:hover{
+        background-color: rgba(255, 204, 212, 0.253);
+        transition: 0.3s ease-in-out;
+    }
+    .b:hover{
+        background-color: rgba(177, 189, 255, 0.253);
+        transition: 0.3s ease-in-out;
+    }
+    .c:hover{
+        background-color: rgba(138, 245, 213, 0.253);
+        transition: 0.3s ease-in-out;
+    }
+    .d:hover{
+        background-color: rgba(203, 247, 82, 0.253);
+        transition: 0.3s ease-in-out;
+    }
+    .e:hover{
+        background-color: rgba(247, 189, 123, 0.253);
+        transition: 0.3s ease-in-out;
+    }
+    
+
+    /***SOLUTIONS**/
+
+    .solutions-desktop{
+        padding-bottom: inherit;
+        position: absolute;
+        z-index: 1;
+
+        background-color: rgb(255, 255, 255);
+        width: 100%;    
+        
+        
+        z-index: 1;
+    }
+
+    #solutions-display{
+        display: none;
+    }
+
+    
+    #solutions-display.active{
+        display: block;
+    }
+    
+    .underline + .underline2.active{
+        border-bottom: 1px solid blue;
+    }
+
+
+    /** PLANS**********/
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* FIRST BODY  */
+
+    .first-body{
+        
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(120deg, rgb(118, 25, 155), rgb(248, 100, 204));
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 100%;
+        
+        position: relative;
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+
+    .first-body .waves{
+        position: absolute;
+        bottom: -5px;
+        
+        width: 100%;
+        left: 0;
+    }
+
+
+    .first-left{
+        width: 650px;
+        padding-top: 4px;
+        margin: auto;
+        margin-left: 50px;
+        
+    }
+    .first-left>P{
+        margin-bottom: 40px;
+        font-size: 20px;
+        font-weight: bolder;
+        color: white;
+        
+    }
+    
+    .form{
+        display: flex;
+    }
+
+    .first-body-img{
+        max-width: 600px;
+        height: 500px;
+    }
+    h1{
+        line-height: 55px;
+        margin-bottom: 20px;
+        color: white;
+        
+        
+    }
+   
+
+    .btn{
+        font-size: 15px;
+        margin-left: 20px;
+        width: 60%;
+        padding: 15px;        
+    }
+
+    
+    .video{
+        margin-top: 30px;
+        color: white;
+        text-decoration: underline;
+
+    }
+    .vid{
+        margin-left: 20px;
+    }
+
+    .stick{
+            position: relative;
+            
+            color: #000000;
+            
+            text-align: center;
+            transition: top 0.3s; /* Add smooth transition for better user experience */
+
+        }
+
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            justify-content: left;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            padding: 10px;
+            z-index: 1000;
+            box-shadow: 0px 6px 8px 7px rgba(77,67,67,0.2);
+            -webkit-box-shadow: 0px 6px 8px 7px rgba(77,67,67,0.2);
+            -moz-box-shadow: 0px 6px 8px 7px rgba(77,67,67,0.2);
+        }
+
+
+        /******BODY 2***/
+
+        .second-div{
+        
+          
+            
+            
+            padding-right: 10px;
+            max-width: 100%;
+            
+            text-align: left;
+            padding-top: 100px;
+            padding-bottom: 200px;
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width:970px) {
+
+        .hide{
+            display: none;
+        }
+
+        .first-body{
+            flex-wrap: wrap;
+            gap: 10;
+        }
+        .first-body-img{
+            max-width: 400px;
+            height: 500px;
+        }
+
+        h1, p{
+            text-align: center;        
+        }
+
+        #item{
+            display: none;
+        }
+
+        #btn{
+            text-align: center;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .video{
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+
+        }
+
+
+        /******NAV BAR**********************/
+
+        
+        .mobile-bar{
+            display: none;
+            position: absolute;
+            margin-top: 60px;
+            z-index: 1;
+            
+            width: 100%;
+            transition: 0.5s;
+        }
+    
+        .t{
+            display: none;
+        }
+
+        .header1-right{
+            display: none;
+        }
+        
+        .acc-head{
+            font-weight: bolder;
+
+        }
+
+        li{
+            margin-top: 7px;
+            list-style: none;
+            
+            font-weight: bold;
+            opacity: 80%;
+            cursor: pointer;
+        }
+        .feat{
+           
+            border-top: 1px solid rgb(194, 194, 194);
+            
+        }
+
+        .feat>p{
+            text-align: left;
+            margin-top: 5px;
+            font-size: 10.5px;
+            
+        }
+
+        .feat-last{
+            background-color: rgb(240, 240, 240);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        i{
+            margin-right: 15px;
+        }
+        .padd{
+            padding-left: 10px;
+            font-size: 20px;
+        }
+        .pad{
+            margin-left: -15px;
+        }
+
+        .bttn{
+            background-color: inherit;
+            border: 1px solid purple;
+            color: inherit;
+        }
+
+        .right{
+            margin-left: 10px;
+        }
+
+        .log{
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+            
+        }
+
+        .try{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .last{
+            width: 100%;
+            margin: auto;
+        }
+        
+        .reg{
+            font-size: 18px;
+
+        }
+
+        .logi{
+            background-color: none;
+            border: 1px solid blue;
+            font-size: 18px;
+        }
+
+        .bar-icon{
+            display: block;
+            position: absolute;
+            
+            right: 3%;
+            top: 4%;
+        }
+        #closeBtn{
+            display: none;
+        }
+
+        #closeBtn:active{
+            transform: scale(0.9);
+        }
+        #openBtn:active{
+            transform: scale(0.9);
+        }
+
+        .mobile-bar.active{
+            display: block;
+        }
+
+        
+        .stick{
+            position: relative;
+            
+            color: #000000;
+            padding: 10px 0;
+            text-align: center;
+            transition: top 0.3s; /* Add smooth transition for better user experience */
+
+        }
+
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            color: black;
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            padding: 30px;
+            z-index: 1000;
+            box-shadow: 0px 6px 8px 7px rgba(77,67,67,0.2);
+            -webkit-box-shadow: 0px 6px 8px 7px rgba(77,67,67,0.2);
+            -moz-box-shadow: 0px 6px 8px 7px rgba(77,67,67,0.2);
+        }
+
+
+        .first-body{          
+            padding-bottom: 40px;
+        }
+
+
+        /******BODY 2***/
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    }
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+    <div class="containerr">
+
+        <div class="main">
+        
+            <div class="stick">
+
+                <div class="header1-left nav-bar" id="stick">
+
+                
+
+                    <div class="logo">
+                        <div class="sub-logo1">
+                            <img src="https://cdn-icons-png.flaticon.com/512/118/118669.png" alt="" width="20px" height="20px" class="star"> 
+                            <div class="sub-logo2">                    
+                                <h3 class="atlassian">ATLASSIAN</h3>
+                                <h2 class="trello">Trello</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="features t underline" id="features">
+                        <a class="" href="#">Features<i class="fa fa-chevron-down" ></i></a>                                        
+
+
+                    </div>
+
+
+
+
+
+
+
+                    
+                    <div class="solutions t underline2" id="solutions">
+                        <a href="#">Solutions<i class="fa fa-chevron-down"></i></a>
+                        <!--When clicked, display below items-->
+
+                        
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="plans t">
+                        <a href="#">Plans<i class="fa fa-chevron-down"></i></a>
+                        <!--When clicked, display below items-->
+
+                    </div>
+
+                    <div class="pricing t">
+                        <a href="#">Pricing</a>
+                        <!--When clicked, display below items-->
+
+                    </div>
+
+                    <div class="resources t">
+                        <a href="#">Resources<i class="fa fa-chevron-down"></i></a>
+                        <!--When clicked, display below items-->
+                        <!--When clicked, display below items-->
+                        
+                    </div>
+                    
+                </div>
+                
+
+            </div>
+
+             
+
+
+
+
+
+
+            
+
+            <!---------------MOBILE TAB---------->
+
+            <div class="bar-icon">
+                <i id="openBtn" class="fa fa-bars toggle" style="font-size:27px"></i>
+                <i id="closeBtn" class="fa fa-times toggle" style="font-size:27px"></i>
+
+            </div>
+
+
+            <div class="mobile-bar">
+
+                <div class="accordion accordion-flush tryy" id="accordionFlushExample">
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed padd" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Features
+                        </button>
+                      </h2>
+
+
+                      <div id="flush-collapseOne" class="accordion-collapse collapse pad" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body acc-head">Explore the features that help your team succeed </div>
+
+                            <ul class="feat">
+                                <li><i class="fa fa-compass" style="font-size:20px"></i>Views</li>
+                                <p>View your team’s projects from every angle.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-crosshairs" style="font-size:24px"></i>Automation</li>
+                                <p>Automate tasks and workflows with Butler automation.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-cube" style="font-size:24px"></i>Power-Ups</li>
+                                <p>Power up your teams by linking their favorite tools with Trello plugins.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-database" style="font-size:24px"></i>Templates</li>
+                                <p>Give your team a blueprint for success with easy-to-use templates from industry leaders and the Trello community.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-dashboard" style="font-size:24px"></i>Integrations</li>
+                                <p>Find the apps your team is already using or discover new ways to get work done in Trello.</p>
+                            </ul>
+
+                            <ul class="feat feat-last">
+                                <li><i class="fa fa-dot-circle-o" style="font-size:24px"></i>Meet Trello</li>
+                                <p>Trello makes it easy for your team to get work done. No matter the project,
+                                     workflow, or type of team, Trello can help keep things organized. 
+                                     It’s simple – sign-up, create a board, and you’re off! Productivity awaits.
+                                </p>
+                                <div class="last-btn">
+                                    <button class="btn btn-secondary bttn">Check out Trello</button>
+
+                                </div>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed padd" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Solutions
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse pad" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body acc-head">Take a page out of these pre-built Trello playbooks designed for all teams</div>
+
+                            <ul class="feat">
+                                <li><i class="fa fa-compass" style="font-size:20px"></i>Marketing teams</li>
+                                <p>Whether launching a new product, campaign, or creating content, Trello helps marketing teams succeed.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-crosshairs" style="font-size:24px"></i>Product management</li>
+                                <p>Use Trello’s management boards and roadmap features to simplify complex projects and processes.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-cube" style="font-size:24px"></i>Engineering teams</li>
+                                <p>Ship more code, faster, and give your developers the freedom to be more agile with Trello.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-database" style="font-size:24px"></i>Design teams</li>
+                                <p>Empower your design teams by using Trello to streamline creative requests and promote more fluid cross-team collaboration.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-dashboard" style="font-size:24px"></i>Startups</li>
+                                <p>From hitting revenue goals to managing workflows, small businesses thrive with Trello.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-dashboard" style="font-size:24px"></i>Remote teams</li>
+                                <p>Keep your remote team connected and motivated, no matter where they’re located around the world.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li>See all teams <a href=""> <i class="fa fa-chevron-right right" style="font-size:15px"></i></a></li>
+                               
+                            </ul>
+
+                            <ul class="feat feat-last">
+                                <li><i class="fa fa-dot-circle-o" style="font-size:24px"></i>Our product in action</li>
+                                <p>Read though our use cases to make the most of Trello on your team.</p>
+                                <div class="last-btn">
+                                    <button class="btn btn-secondary bttn">See all use cases</button>
+
+                                </div>
+                            </ul>
+                      </div>
+                    </div>
+
+
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed padd" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Plans
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse pad" data-bs-parent="#accordionFlushExample">
+
+                            
+
+                            <ul class="feat">
+                                <li><i class="fa fa-compass" style="font-size:20px"></i>Standard</li>
+                                <p>For teams that need to manage more work and scale collaboration.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-crosshairs" style="font-size:24px"></i>Premium</li>
+                                <p>Best for teams up to 100 that need to track multiple projects and visualize work in a variety of ways.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-cube" style="font-size:24px"></i>Enterprise</li>
+                                <p>Everything your enterprise teams and admins need to manage projects.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-database" style="font-size:24px"></i>Free plan</li>
+                                <p>For individuals or small teams looking to keep work organized.</p>
+                                <div class="last-btn">
+                                    <button class="btn btn-secondary bttn">Take a tour of Trello</button>
+
+                                </div>
+
+                            </ul>                            
+
+                            <ul class="feat feat-last">
+                                <li><i class="fa fa-dot-circle-o" style="font-size:24px"></i>Compare plans & pricing</li>
+                                <p>Whether you’re a team of 2 or 2,000, Trello’s flexible pricing model means you only pay for what you need.</p>
+                                <div class="last-btn">
+                                    <button class="btn btn-secondary bttn">View Trello pricing</button>
+
+                                </div>
+                            </ul>
+                      </div>
+                    </div>
+
+
+                    
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed padd" type="button" data-bs-toggle="none" data-bs-target="" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Pricing
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse pad" data-bs-parent="#accordionFlushExample">
+
+                            
+
+                            <ul class="feat">
+                                
+                            </ul>
+                            <ul class="feat">
+                                
+                            </ul>
+                            <ul class="feat">
+                                
+                            </ul>
+                            <ul class="feat">
+                                
+                                
+
+                            </ul>                            
+
+                            <ul class="feat feat-last">
+                                
+                                
+                            </ul>
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed padd" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Resources
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse pad" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body acc-head">Learn & connect</div>
+
+                            <ul class="feat">
+                                <li>Trello guide</li> 
+                                <p>Our easy to follow workflow guide will take you from project set-up to Trello expert in no time.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li>Remote work guide</li>
+                                <p>The complete guide to setting up your team for remote work success.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li></i>Webinars</li>
+                                <p>Enjoy our free Trello webinars and become a productivity professional.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li>Customer stories</li>
+                                <p>See how businesses have adopted Trello as a vital part of their workflow.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li>Developers</li>
+                                <p>The sky's the limit in what you can deliver to Trello users in your Power-Up!</p>
+                            </ul>
+                            <ul class="feat">
+                                <li><i class="fa fa-dashboard" style="font-size:24px"></i>Help resources</li>
+                                <p>Need help? Articles and FAQs to get you unstuck.</p>
+                            </ul>
+                            <ul class="feat">
+                                <li>See all teams <a href=""> <i class="fa fa-chevron-right right" style="font-size:15px"></i></a></li>
+                               
+                            </ul>
+
+                            <ul class="feat feat-last">
+                                <li>Helping teams work better, together</li>
+                                <p>Discover Trello use cases, productivity tips, best practices for team collaboration, and expert remote work advice.</p>
+                                <div class="last-btn">
+                                    <button class="btn btn-secondary bttn">Check out the Trello blog</button>
+
+                                </div>
+                            </ul>
+                            <ul class="feat feat-last">
+                                <li>Helping teams work better, together</li>
+                                <p>Discover Trello use cases, productivity tips, best practices for team collaboration, and expert remote work advice.</p>
+                                <div class="last-btn">
+                                    <button class="btn btn-secondary bttn">Check out the Trello blog</button>
+
+                                </div>
+                            </ul>
+                      </div>
+                    </div>
+
+
+
+
+
+                    <div class="accordion-item ">
+                     
+                        <div class="try">
+                            <button id="" class="btn btn-primary reg">Get Trello for free</button>                                                                                                                
+                        </div>
+
+                        <div class="try">
+                            <button id="" class="btn logi ">Log in</button>                                                                                                                
+                        </div>
+                        
+                      
+                    </div>
+                    
+
+
+
+
+
+                    <style>
+                        .tryy{
+                            border-bottom: 5px solid rgb(53, 18, 250)128, 128, 128);
+                        }
+                    </style>
+
+
+
+
+
+
+
+                </div>
+                
+
+
+                
+
+                
+                
+                
+            </div>
+            
+            <!--------------- END OF MOBILE TAB---------->
+
+
+
+
+            <div class="header1-right">
+                <div class="login">
+                    <button class="login-btn">Login</button>
+                </div>
+
+                <div class="get-trello-for-free">
+                    <button class="get-trol-btn">Get Trello for free</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+        <!-----------------------DESKCSDWTOP NAV BAR TIEMS WHEN CLICKED-------------------------------------->
+
+
+            <!----------------FEATURES------------>
+
+            <div class="features-desktop absolute hide" id="features-display">
+                        
+                <div class="features-flex">
+                    <div class="flex-left">
+
+                        <div class="inner-flex1">
+                            <h5>Explore the features that help your team succeed</h5>
+                            <hr>
+    
+                            <div class="flexing1">
+                                <ul class="feat a">
+                                    <li><i class="fa fa-compass" style="font-size:20px"></i>Views</li>
+                                    <p class ="desktop-p">View your team’s projects from every angle.</p>
+                                </ul>
+    
+                                <ul class="feat b">
+                                    <li><i class="fa fa-crosshairs" style="font-size:24px"></i>Automation</li>
+                                    <p class ="desktop-p">Automate tasks and workflows with Butler automation.</p>
+                                </ul>
+    
+                                <ul class="feat c">
+                                    <li><i class="fa fa-cube" style="font-size:24px"></i>Power-Ups</li>
+                                    <p class ="desktop-p">Power up your teams by linking their favorite tools with Trello plugins.</p>
+                                </ul>
+                                
+                            </div>
+    
+                            <div class="flexing2">
+                                <ul class="feat d">
+                                    <li><i class="fa fpppa-database" style="font-size:24px"></i>Templates</li>
+                                    <p class ="desktop-pp ">Give your team a blueprint for success with easy-to-use templates from industry leaders and the Trello community.</p>
+                                </ul>
+                                
+                                <ul class="feat desktop-ppp e">
+                                    <li><i class="fa fa-dashboard" style="font-size:24px"></i>Integrations</li>
+                                    <p class ="desktop-p ">Find the apps your team is already using or discover new ways to get work done in Trello.</p>
+                                </ul>
+    
+    
+                            </div>
+    
+    
+    
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="right-flex">
+                        <ul class="feat feat-last">
+                            <h5>Meet Trello</h5>                        
+                          
+                            <hr>
+                            <p>Trello makes it easy for your team to get work done. No matter the project,
+                                 workflow, or type of team, Trello can help keep things organized. 
+                                 It’s simple – sign-up, create a board, and you’re off! Productivity awaits.
+                            </p>
+                            <div class="last-btn">
+                                <button class="btn btn-secondary bttn">Check out Trello</button>
+
+                            </div>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        <!----------------SOLUTIONS------------>
+
+        <div class="solutions-desktop hide " id="solutions-display">
+                        
+            <div class="features-flex">
+                <div class="flex-left">
+
+                    <div class="inner-flex1">
+                        <h5>Take a page out of these pre-built Trello playbooks designed for all teams</h5>
+                        <hr>
+
+                        <div class="flexing1">
+                            <ul class="feat a">
+                                <li><i class="fa fa-compass" style="font-size:20px"></i>Marketing teams</li>
+                                <p class ="desktop-p">Whether launching a new product, campaign, or creating content, Trello helps marketing teams succeed.</p>
+                            </ul>
+
+                            <ul class="feat b">
+                                <li><i class="fa fa-crosshairs" style="font-size:24px"></i>Product management</li>
+                                <p class ="desktop-p">Use Trello’s management boards and roadmap features to simplify complex projects and processes.</p>
+                            </ul>
+
+                            <ul class="feat c">
+                                <li><i class="fa fa-cube" style="font-size:24px"></i>Engineering teams</li>
+                                <p class ="desktop-p">Ship more code, faster, and give your developers the freedom to be more agile with Trello.</p>
+                            </ul>
+                            
+                        </div>
+
+                        <div class="flexing1">
+                            <ul class="feat a">
+                                <li><i class="fa fa-compass" style="font-size:20px"></i>Design teams</li>
+                                <p class ="desktop-p">Empower your design teams by using Trello to streamline creative requests and promote more fluid cross-team collaboration.</p>
+                            </ul>
+
+                            <ul class="feat b">
+                                <li><i class="fa fa-crosshairs" style="font-size:24px"></i>Startups</li>
+                                <p class ="desktop-p">From hitting revenue goals to managing workflows, small businesses thrive with Trello.</p>
+                            </ul>
+
+                            <ul class="feat c">
+                                <li><i class="fa fa-cube" style="font-size:24px"></i>Remote teams</li>
+                                <p class ="desktop-p">Keep your remote team connected and motivated, no matter where they’re located around the world.</p>
+                            </ul>
+                            
+                        </div>
+
+                        <div class="fle">
+                            <a class="pointing-arrow" href="#"> See all teams<i class="fa fa-arrow-right right"></i></a>
+                            <style>
+                                .pointing-arrow{
+                                    text-align: left;
+                                    color: inherit;
+                                    margin-top: 15px;
+                                    font-size: 21px;
+                                    font-weight: bold;
+                                }
+                                .pointing-arrow:hover .right{
+                                    
+                                    margin-left: 20px;
+                                    transition: 0.3s ease-in-out;
+                                    
+                                }
+                                
+                                .right{
+                                    margin-left: 10px;
+                                    color: rgb(2, 2, 255);
+                                }
+                            </style>
+
+                            
+                        </div>
+
+
+
+
+
+                       
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="right-flex flex-right-solutions">
+                    <ul class="feat feat-last">
+                        <h5>Our product in action
+                        </h5>                        
+                      
+                        <hr>
+
+                        <div class="solutions-div">
+                            <h5 class="solutions-head">Use case: Task management<i class="fa fa-arrow-right right appear"></i></h5> 
+                            <p class="solutions-text">Track progress of tasks in one convenient place with a visual layout that adds ‘ta-da’ to your to-do’s.</p>
+                        </div>
+
+                        <div class="solutions-div">
+                            <h5 class="solutions-head">Use case: Resource hub<i class="fa fa-arrow-right right appear"></i></h5> 
+                            <p class="solutions-text">
+                                Save hours when you give teams a well-designed hub to find information easily and quickly.</p>
+                        </div>
+
+                        <div class="solutions-div">
+                            <h5 class="solutions-head">Use case: Project management<i class="fa fa-arrow-right right appear"></i></h5> 
+                            <p class="solutions-text">Keep projects organized, deadlines on track, and teammates aligned with Trello.</p>
+                        </div>
+
+                        <a class="pointing-arrow" href="#"> See all use cases<i class="fa fa-arrow-right right"></i></a>
+                        <style>
+                            .solutions-div{
+                                margin-bottom: 40px;
+                            }
+                            .solutions-text{
+                                margin-top: 10px;
+                            }
+
+                            .appear{
+                                
+                                font-size: 1px;
+                            }
+                            .solutions-div:hover .appear{
+                                font-size: 21px;
+                                transition: 0.3s ease-in-out;
+
+                                
+                                
+
+                            }
+
+
+                        </style>
+                        
+                        
+                    </ul>
+
+                    <style>
+                        .flex-right-solutions{
+                            height: inherit;
+                        }
+                    </style>
+
+
+                </div>
+            </div>
+
+
+
+
+            <style>
+               
+            </style>
+        </div>
+
+       
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="header2">
+            <p>Accelerate your teams' work with Atlassian Intelligence (AI) features 🤖 now in beta! <a class="learn-more" href="#"> Learn more.</a></p>
+        </div>
+
+
+        <!-----BODY 1-->
+        
+
+        <div class="first-body">
+
+            <div class="first-left">
+                <h1>Trello brings all your tasks, teammates, and tools together</h1>
+                <p>Keep everything in the same place—even if your team isn’t.</p>
+                
+                <div class="form">
+                    <input id="item" class="form-control" type="text" placeholder="what are you paying for">
+                    <button id="btn" class="btn btn-primary">Sign up - it's free!</button>
+
+                </div>
+                <div class="video">
+                    <a href="https://trello.com/#video">Watch Video<i class="fa fa-play-circle vid"></i></a>
+                </div>
+                
+            </div>
+
+            <div class="first-right">
+                <img class="first-body-img" src="https://images.ctfassets.net/rz1oowkt5gyp/75rDABL8fyMtNLlUAtBxrg/c5e145977a86c41c47e17c69410c64f7/TrelloUICollage_4x.png?w=1140&fm=webp" alt="">
+            </div>
+
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,224L40,197.3C80,171,160,117,240,96C320,75,400,85,480,101.3C560,117,640,139,720,122.7C800,107,880,53,960,48C1040,43,1120,85,1200,96C1280,107,1360,85,1400,74.7L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+
+
+        </div>
+
+
+
+
+        <!-----BODY 2-->
+        <div class="second-div">
+            
+        
+
+            <div class="body2">
+                <div class="body2-main">
+                    <h3>TRELLO 101</h3>
+                    <h1>A productivity powerhouse</h1>
+                    <p>Simple, flexible, and
+                        
+                        
+                         powerful. All it takes are boards, lists, 
+                        and cards to get a clear view of who’s doing what and what needs 
+                        to get done. Learn more in our <a class="decorate" href="#">guide for getting started</a> .</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="left-card">
+                    <div class="card1">
+                        <p class="p">Boards</p>
+                        <p class="p2">Trello boards keep tasks organized and work moving forward. In a glance, see everything from
+                            “things to do” to “aww yeah, we did it!”
+                        </p>
+                    </div>
+
+                    <div class="card1">
+                        <p class="p">Lists</p>
+                        <p class="p2">The different stages of a task. Start as simple as To Do, Doing or Done—or build a workflow 
+                            custom fit to your team’s needs. There’s no wrong way to Trello.
+                        </p>
+                    </div>
+
+                    <div class="card1">
+                        <p class="p">Cards</p>
+                        <p class="p2">Cards represent tasks and ideas and hold all the information to get the job done. As you 
+                            make progress, move cards across lists to show their status.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="right-card">
+                    <img src="https://images.ctfassets.net/rz1oowkt5gyp/75rDABL8fyMtNLlUAtBxrg/c5e145977a86c41c47e17c69410c64f7/TrelloUICollage_4x.png?w=1140&fm=webp"  alt="" class="screen">
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+        
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <script>
+        const openBtn = document.getElementById("openBtn")
+        const closeBtn = document.getElementById("closeBtn")
+        const navBar = document.querySelector(".mobile-bar")
+
+        openBtn.addEventListener("click", ()=>{
+            navBar.classList.toggle("active")
+            openBtn.style.display ="none"
+            closeBtn.style.display="block"
+
+            console.log("clicked")
+            
+        })
+        closeBtn.addEventListener("click", ()=>{
+            navBar.classList.toggle("active")
+            openBtn.style.display ="block"
+            closeBtn.style.display="none"
+
+            console.log("clicked")
+            
+        })
+
+
+        //STICKY HEADER
+
+        document.addEventListener('scroll', function() {
+            var header = document.getElementById('stick');
+            var headerHeight = header.offsetHeight;
+            
+            // Check if the scroll position is below the header
+            if (window.scrollY > headerHeight) {
+                // Add the 'sticky' class to make the header sticky
+                header.classList.add('sticky');
+            } else {
+                // Remove the 'sticky' class when scrolling back to the top
+                header.classList.remove('sticky');
+            }
+        });
+
+
+
+        /****DESKTOP DISPLAY - FEATURES ***/
+        var underline = document.querySelector(".underline")
+        
+        var features = document.getElementById("features")
+        var featuresDisplay = document.getElementById("features-display")
+
+        features.addEventListener("click",()=>{
+            featuresDisplay.classList.toggle("active")
+            underline.classList.toggle("active")
+            
+            
+            
+            solutionsDisplay.classList.remove("active")
+            underline2.classList.remove("active")
+            
+            
+            
+            console.log("click")
+            
+        })
+
+        /****DESKTOP DISPLAY - SOLUTIONS ***/
+        var underline2 = document.querySelector(".underline2")
+        var solutions = document.getElementById("solutions")
+        var solutionsDisplay = document.getElementById("solutions-display")
+
+        solutions.addEventListener("click",()=>{
+            solutionsDisplay.classList.toggle("active")
+            underline2.classList.toggle("active")
+            
+            
+            featuresDisplay.classList.remove("active")
+            underline.classList.remove("active")
+            
+            
+
+
+            console.log("click")
+
+        })
+
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
